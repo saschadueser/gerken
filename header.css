@@ -58,6 +58,7 @@ header nav a:hover {
     color: #fff
 }
 
+/* For bigger screens only */
 @media screen and (min-width: 1024px){
     header {
         background: linear-gradient(120deg,#fff 0%, #fff 40%, var(--salbeiGreen) 40%, var(--salbeiGreen) 100%) fixed;

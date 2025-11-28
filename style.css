@@ -31,7 +31,6 @@ html {
 body, ::placeholder, input, textarea {
     font-family: Roboto;
     font-size: 1rem;
-    hyphens: auto;
 }
 
 textarea {
@@ -135,78 +134,53 @@ a {
     padding: 0 1.5rem;
 }
 
-
-.footer-nav {
-    display: flex;
-    gap: 1rem;
-}
-
-footer .footer-lastline{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 3rem;
-}
-
-footer {
-    background: var(--salbeiGreen);
-}
-
-footer .footer-firstline {
-    display: grid;
-    grid-template: auto / repeat(3, 1fr);
-    padding: 1rem 0;
-}
-
-.footer-address ul {
-    list-style-type: none;
-}
-
-footer .footer-firstline ul {
-    padding: 1.5rem;
-    list-style-position: inside;
-}
-
-li.list-phone::marker {
-    content: "\f095";
-    font-family: FontAwesome;
-}
-
-li.list-mail::marker {
-    content: "\f0e0";
-    font-family: FontAwesome;
-}
-
 .section-title {
     margin-bottom: 2rem;
 }
 
-#about .about-content-wrapper {
-    display: grid;
-    grid-template: 300px / 1fr 1fr;
-    gap: 1rem;
+/* For Bigger screens only */
+@media screen and (min-width: 1028px) {
+    h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+    }
 }
 
-.about-text {
-    position: relative;
-    grid-column: span 2;
-    grid-row: 2;
+
+/**
+    Homepage
+    Intro-Bereich
+*/
+
+#intro h2 {
+    text-align: center;
 }
 
-.about-image {
-    background: url("images/about-placeholder.jpg") no-repeat center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    grid-row: 1;
-    grid-column: span 2;
+#intro .fa {
+    display: none;
 }
 
-.about-image .fa {
-    font-size: 10rem;
-    opacity: 0.75;
-    color: var(--salbeiGreen);
+/* For Bigger screens only */
+@media screen and (min-width: 1028px) {
+    #intro .fa {
+        display: inline-block;
+        font-size: 10rem;
+        opacity: 0.1;
+        position: absolute;
+        top: -3rem;
+        left: -5rem;
+        transform: rotate(-45deg);
+        color: var(--salbeiGreen);
+    }
+}
+
+/**
+    Homepage
+    Service-Boxen
+*/
+
+#service {
+    background: var(--anthrazitGreyGradient);
+    color: #fff;
 }
 
 .service-box-wrapper {
@@ -280,111 +254,17 @@ li.list-mail::marker {
     background-position: center;
 }
 
-.about-icon {
-    position: absolute;
-    right: -5rem;
-    top: -5rem;
-    font-size: 10rem;
-    transform: rotate(45deg);
-    opacity: 0.1;
-}
-
-input:not([type="checkbox"]), textarea {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
-}
-
-input[type="checkbox"] {
-    cursor: pointer;
-    accent-color: var(--salbeiGreen);
-}
-
-#intro h2 {
-    text-align: center;
-}
-
-label {
-    cursor: pointer;
-}
-
-footer {
-    color: #fff;
-}
-
-footer a {
-    color: #fff;
-}
-
-footer a:hover {
-    color: #000;
-}
-
-
-
-.form-item {
-    margin: 1rem 0;
-}
-
-.contact-options-wrapper {
-    display: flex;
-    gap: 1rem;
-}
-
-.contact-option {
-    flex: 1;
-}
-
-.contact-option .fa {
-    font-size: 2rem;
-    margin: 0 0 1rem 0;
-}
-
-#kontakt {
-    background: var(--anthrazitGreyGradient);
-    color: #fff;
-}
-
-#service {
-    background: var(--anthrazitGreyGradient);
-    color: #fff;
-}
-
-#intro .fa {
-    display: none;
-}
-
+/* For Bigger screens only */
 @media screen and (min-width: 1028px) {
-
     .service-box {
         flex: 1 0 500px;
     }
-
-    h1, h2, h3, h4, h5, h6 {
-        text-align: left;
-    }
-
-    #intro .fa {
-        display: inline-block;
-        font-size: 10rem;
-        opacity: 0.1;
-        position: absolute;
-        top: -3rem;
-        left: -5rem;
-        transform: rotate(-45deg);
-        color: var(--salbeiGreen);
-    }
-
-    #about .about-content-wrapper {
-        display: flex;
-    }
-
-    #about .about-content-wrapper > div {
-        flex: 1;
-    }
-
 }
+
+/**
+    Homepage
+    Preise-Bereich
+*/
 
 #preise {
     background: var(--salbeiGreen);
@@ -423,6 +303,61 @@ footer a:hover {
     border-bottom: 1px solid #fff;
 }
 
-form a:hover {
-    color: #fff;
+/**
+    Homepage
+    Über Mich-Bereich
+*/
+
+#about .about-content-wrapper {
+    display: grid;
+    grid-template: 300px / 1fr 1fr;
+    gap: 1rem;
 }
+
+.about-text {
+    position: relative;
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+.about-image {
+    background: url("images/about-placeholder.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    grid-row: 1;
+    grid-column: span 2;
+}
+
+.about-image .fa {
+    font-size: 10rem;
+    opacity: 0.75;
+    color: var(--salbeiGreen);
+}
+
+.about-icon {
+    position: absolute;
+    right: -5rem;
+    top: -5rem;
+    font-size: 10rem;
+    transform: rotate(45deg);
+    opacity: 0.1;
+}
+
+/* For Bigger screens only */
+@media screen and (min-width: 1028px) {
+
+    #about .about-content-wrapper {
+        display: flex;
+    }
+
+    #about .about-content-wrapper > div {
+        flex: 1;
+    }
+
+}
+
+
+

@@ -1,0 +1,49 @@
+footer {
+    color: #fff;
+    background: var(--salbeiGreen);
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+footer .footer-firstline {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    padding: 1rem 0;
+}
+
+footer .footer-firstline ul {
+    padding: 1.5rem;
+    list-style-position: inside;
+}
+
+footer .footer-lastline{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-address ul {
+    list-style-type: none;
+}
+
+li.list-phone::marker {
+    content: "\f095";
+    font-family: FontAwesome;
+}
+
+li.list-mail::marker {
+    content: "\f0e0";
+    font-family: FontAwesome;
+}
+

@@ -1,0 +1,42 @@
+label {
+    cursor: pointer;
+}
+
+input:not([type="checkbox"]), textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--salbeiGreen);
+}
+
+form a:hover {
+    color: #fff;
+}
+
+#kontakt {
+    background: var(--anthrazitGreyGradient);
+    color: #fff;
+}
+
+.form-item {
+    margin: 1rem 0;
+}
+
+.contact-options-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-option {
+    flex: 1;
+}
+
+.contact-option .fa {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
